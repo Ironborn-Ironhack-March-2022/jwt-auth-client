@@ -12,7 +12,7 @@ function LoginPage(props) {
 
     const navigate = useNavigate();
 
-    const { storeToken } = useContext(AuthContext);
+    const { storeToken, authenticateUser } = useContext(AuthContext);
 
 
     const handleLoginSubmit = (e) => {
@@ -28,6 +28,8 @@ function LoginPage(props) {
                 console.log('Login was sucessful. JWT token: ', jwt);
 
                 storeToken(jwt);
+                authenticateUser();
+
                 navigate('/');
             })
             .catch((error) => {

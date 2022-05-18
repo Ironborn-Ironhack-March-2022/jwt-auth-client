@@ -6,14 +6,16 @@ import LogInPage from "./pages/LogInPage";
 function App() {
   return (
     <div className="App">
+
       <Navbar />
-      <p>LEARN JWT 😊</p>
+
       <Routes>
-        <Route path='/' element={<h1>Welcome</h1>} />
+        <Route path='/' element={<h1>Hey there 👋 <br /> let's learn token-based-authentication 😊</h1>} />
         <Route path='/signup' element={<SignUpPage />} />
         <Route path="/login" element={<LogInPage />} />
       </Routes>
-    </div>
+
+    </div >
   );
 }
 
